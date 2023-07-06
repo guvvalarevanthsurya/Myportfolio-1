@@ -1,0 +1,254 @@
+body{
+    margin-top:20px;
+    background-color: black;
+    color:aliceblue;  
+    text-align:center;
+}
+/* header */
+header{
+    position:relative;
+}
+.logo{
+    font-size:1.5rem;
+}
+.R{
+    color:red;
+}
+#title{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#title li{
+    list-style-type:none;
+    padding:0px 20px;
+}
+.lists li:hover{
+    scale:0.8;
+}
+.lists{
+    display:flex;
+    padding:0px 10px;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+a:hover{
+    color:orange;
+}
+/* .button{
+    background-color:orange;
+    padding:0.8em 1em;
+    border-radius:30px;
+    cursor:pointer;
+} 
+.button:hover{
+    color:white;
+    scale:0.8;
+} */
+.button {
+    background-color: orange;
+    padding: 0.8em 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    color: white;
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    transition-duration: 0.6s;
+    width: 100%;
+    background-color: rgba(23, 193, 223,0.5);
+  }
+  
+  .button:hover::after {
+    height: 50%;
+  }
+  
+
+.menu_bar{
+    display: none;
+    font-size:30px;
+}
+.menu_bar:hover{
+    cursor:pointer;
+
+}
+.dropdown{
+    display:none;
+    position:absolute;
+    right:2rem;
+    overflow:hidden;
+    height:0px;
+    top:60px;
+    width:240px;
+    border-radius:20px;
+    background:rgba(255, 255, 255, 0.2);
+}
+.dropdown.open{
+    height:240px;
+}
+.dropdown li{
+    list-style-type: none;
+    padding:10px;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* middle */
+
+#middle{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color:cadetblue;
+    padding:1rem 2rem;
+    margin:2rem;
+    border-radius:20px;
+}
+#middle:hover{
+    scale:0.99;
+}
+#middle img{
+    height:250px;
+    width:250px;
+    border-radius:50%;
+}
+#middle li{
+    list-style-type: none;
+    font-size:2rem;
+    font-family: 'Roboto', sans-serif;
+    padding:0.5rem;
+}
+span{
+    color:red;
+}
+
+/* skills */
+#skills img{
+    height: 200px;
+    width:200px;
+}
+#skills{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+   
+}
+.box{
+    border:5px solid white;
+    border-radius:10px;
+    padding:1rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+
+
+.box:hover{
+    scale:0.99;
+}
+
+/* footer */
+
+#footer{
+    background-color:brown;
+    padding:20px;
+}
+#footer li{
+    list-style-type: none;
+    font-size:1.5rem;
+    font-family: 'Pathway Extreme', sans-serif;
+}
+.social{
+    margin:20px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+.social .bi{
+    font-size:2rem;
+    color:black;
+    border-radius:10%;
+}
+.social i:hover{
+    scale:2;
+    color:blue;
+}
+@media screen and (max-width:576px){
+    /* header */
+    .lists , #title .button{
+        display:none;
+    }
+    .menu_bar,.dropdown{
+        display:block;
+    }
+    .dropdown{
+        left:2rem;
+        width:auto;
+    }
+    /* middle */
+    #middle{
+        display:flex;
+        flex-direction:column-reverse;
+        gap:1rem;
+    }
+    #skills{
+        display:flex;
+        flex-direction:column;
+        margin:1rem;
+    }
+    .box{
+        margin:1rem;
+        border:5px solid white;
+        padding:1rem;
+    }
+    }
+   
+   
+@media screen and (min-width:577px) and (max-width:790px){
+    .lists , #title .button{
+        display:none;
+    }
+    .menu_bar,.dropdown{
+        display:block;
+    }
+    #skills{
+        display:flex;
+        flex-direction:column;
+        margin:3rem;
+    }
+    .box{
+        margin:1rem;
+        border:5px solid white;
+        padding:1rem;
+        flex-direction:row;
+        column-gap:1rem;
+    }
+
+}
+@media screen and (min-width:791px){
+    #skills{
+        margin:2rem;
+        column-gap:2rem;
+    }
+}
+
+
+
+
+
